@@ -1,7 +1,9 @@
 # demoblaze-test-automation
 Playwright Test Automation Sample Project With POM
 
-The following test case is automated in this project with the page object model and can run against multiple environments, different screen sizes and mobile views to check site responsiveness.
+The following test case is automated in this project with the page object model and can run against multiple environments, different screen sizes and mobile views to check site responsiveness. Also test is parameterized to achieve a data-driven test for various input scenarios.
+
+# Test Case Outline
 
 <table width="300">
   <tr>
@@ -46,9 +48,18 @@ The following test case is automated in this project with the page object model 
   </tr>
 </table>
 
+## Assumption
+
+* There are more than one products available for given search keyword.
+* 'Sony vaio i5', 'Samsung galaxy s6' and 'Dell i7 8gb' are available.
+
 
 
 # How To Run
+
+Prerequisites:  
+Install Node.js latest (18 +)
+
 1. Git clone the project https://github.com/maheshcode/demoblaze-test-automation.
 2. Move to folder 'demobalze-test-automation'.
 3. Execute 'npm install'.
@@ -109,6 +120,13 @@ Add the project parameter when running the test in the command line "npx playwri
 or use VSCode as follows
 
 ![image](https://github.com/user-attachments/assets/7206e729-8a62-4f99-9904-d2273c809561)
+
+## Implement data-driven for various input scenario
+
+The test case mentioned above implemented with parameterized test where it can run for vsrious inputs. It can further implement to get data from files if there is lot input data sets.
+
+![image](https://github.com/user-attachments/assets/3c5b5952-e140-4d9e-b493-5ab1ceb48d69)
+
 
 
 
