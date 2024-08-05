@@ -1,7 +1,7 @@
 # demoblaze-test-automation
 Playwright Test Automation Sample Project With POM
 
-The following test case is automated in this project with the page object model
+The following test case is automated in this project with the page object model and can run against multiple environments, different screen sizes and mobile views to check site responsiveness.
 
 <table width="300">
   <tr>
@@ -69,7 +69,7 @@ https://playwright.dev/docs/getting-started-vscode
 
 ## Running test for site responsiveness across different screen sizes and devices
    
-Different projects config in playwright.config to run in different screen sizes and device emulators
+Different projects config in playwright.config to run in different screen sizes and device emulators, 
 
   projects: [
   
