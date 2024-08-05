@@ -17,11 +17,11 @@ The following test case is automated in this project with the page object model
     <td> Verify Welcome text contains the new user's user name </td>
   </tr>
   <tr>
-    <td> 3. Select the category 'laptops' and search for the item name containing the keyword eg: 'Sony', and through navigation </td>
+    <td> 3. Select the category 'laptops' and search for the item name <br> containing the keyword eg: 'Sony', and through navigation </td>
     <td> TBA </td>
   </tr>
    <tr>
-    <td> 4. Click on the products that selected </td>
+    <td> 4. Click on the products that are selected </td>
     <td> Verify it will display with the correct product name visible </td>
   </tr>
    <tr>
@@ -37,7 +37,7 @@ The following test case is automated in this project with the page object model
     <td> Verify added items are available with correct name and price, <br> and item count <br> and total amount  </td>
   </tr>
   <tr>
-    <td> 8. Remove one item from  </td>
+    <td> 8. Remove one item from the cart  </td>
     <td> Verify item count reduced and the total amount is reduced </td>
   </tr>
    <tr>
