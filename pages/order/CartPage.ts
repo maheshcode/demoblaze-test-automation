@@ -21,10 +21,10 @@ export class CartPage extends BasePage {
         this.page = page;
         this.getTableRows = page.locator('table tbody tr');
         this.btnPlaceOrder = page.getByRole('button', { name: 'Place Order' });
-        this.inputName= page.getByLabel('Total:');
-        this.inputCC= page.getByLabel('Credit card:');
-        this.inputCountry= page.getByLabel('Country:');
-        this.inputCity= page.getByLabel('City:');
+        this.inputName = page.getByLabel('Total:');
+        this.inputCC = page.getByLabel('Credit card:');
+        this.inputCountry = page.getByLabel('Country:');
+        this.inputCity = page.getByLabel('City:');
         this.msgOrderSuccess = page.getByRole('heading', { name: 'Thank you for your purchase!' });
         this.msgOk = page.getByRole('button', { name: 'OK' });
     }
@@ -46,26 +46,25 @@ export class CartPage extends BasePage {
         await responsePromise;
     }
 
-    async checkProdictPriceInCart(productName: string,price:string) {
-        await expect (this.getTableRows
+    async checkProdictPriceInCart(productName: string, price: string) {
+        await expect(this.getTableRows
             .filter({ hasText: productName })
-            .locator('text='+price)).toBeVisible();
+            .locator('text=' + price)).toBeVisible();
     }
 
-    async placeOrder(name:string,creditCard:string,amount:string,country:string='SL',city:string='Col'){
+    async placeOrder(name: string, creditCard: string, amount: string, country: string = 'SL', city: string = 'Col') {
         await this.btnPlaceOrder.click();
-        await expect(this.page.getByText('Total: '+amount)).toBeVisible();
+        await expect(this.page.getByText('Total: ' + amount)).toBeVisible();
         await this.inputName.fill(name);
         await this.inputCC.fill(creditCard);
         await this.inputCountry.fill(country);
         await this.inputCity.fill(city);
         await this.page.getByRole('button', { name: 'Purchase' }).scrollIntoViewIfNeeded();
         await this.page.getByRole('button', { name: 'Purchase' }).click();
-        await expect(this.msgOrderSuccess).toBeVisible(); 
-        await expect(this.page.getByText('Amount: '+amount)).toBeVisible();
-        await expect(this.page.getByText('Card Number: '+creditCard)).toBeVisible();
-        await expect(this.page.getByText('Name: '+name)).toBeVisible();
-        await this.msgOk.click();     
+        await expect(this.msgOrderSuccess).toBeVisible();
+        await expect(this.page.getByText('Amount: ' + amount)).toBeVisible();
+        await expect(this.page.getByText('Card Number: ' + creditCard)).toBeVisible();
+        await expect(this.page.getByText('Name: ' + name)).toBeVisible();
     }
 
 

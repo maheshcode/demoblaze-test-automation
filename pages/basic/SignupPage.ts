@@ -5,9 +5,7 @@ export class SignupPage {
     readonly inputUserName: Locator;
     readonly inputPaswword: Locator;
     readonly btnSignUp: Locator;
-    /**
-     *
-     */
+
     constructor(page: Page) {
         this.page = page;
         this.inputUserName = page.getByLabel('Username:');
@@ -22,8 +20,8 @@ export class SignupPage {
         this.page.once('dialog', async dialog => {
             expect(dialog.message()).toContain('Sign up successful')
             await dialog.accept();
-          });    
-        await this.page.getByRole('button', { name: 'Sign up' }).click(); 
+        });
+        await this.page.getByRole('button', { name: 'Sign up' }).click();
         await this.page.waitForTimeout(5000)
     }
 

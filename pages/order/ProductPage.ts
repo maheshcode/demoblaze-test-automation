@@ -17,18 +17,18 @@ export class ProductPage extends BasePage {
         await expect(this.page.getByRole('heading', { name: productName })).toBeVisible();
     }
 
-    async addToCart(index:number) {
-       // if(index==0){
-         this.page.once('dialog', async dialog => {
+    async addToCart(index: number) {
+        // if(index==0){
+        this.page.once('dialog', async dialog => {
             expect(dialog.message()).toContain('Product added.');
             await dialog.accept();
         });
-   // }
+        // }
         await this.page.getByRole('link', { name: 'Add to cart' }).click();
         await this.page.waitForTimeout(5000);
     }
 
-   
+
 
 
 

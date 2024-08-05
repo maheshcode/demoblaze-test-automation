@@ -25,7 +25,7 @@ test('E2E: Place an order with new signup user', async ({ page }) => {
     let product: { name: string, price: string }[] = await homePage.searchProductNameContains('Sony')
     homePage = await homePage.getHome();
 
-    let total:number = 0;
+    let total: number = 0;
     // Add search item to the cart
     for (let i = 0; i < product.length; ++i) {
         await homePage.selectProduct('Laptops', product[i].name);
@@ -48,13 +48,13 @@ test('E2E: Place an order with new signup user', async ({ page }) => {
     // Remove cart items
     await cartPage.removeItemFromCart('Sony vaio i5');
     await cartPage.checkCartItemCount(product.length - 1);
-    let removedPrice:number=0;
-    product.forEach(function(value){
-        if(value.name=='Sony vaio i5'){
+    let removedPrice: number = 0;
+    product.forEach(function (value) {
+        if (value.name == 'Sony vaio i5') {
             removedPrice = +value.price;
         }
     });
-    let newTotal:number = total-removedPrice;
+    let newTotal: number = total - removedPrice;
     await cartPage.checkCartTotal(newTotal.toString());
 
     //Place the order & verify success

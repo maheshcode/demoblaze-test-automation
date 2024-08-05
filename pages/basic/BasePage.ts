@@ -5,7 +5,7 @@ import { HomePage } from './HomePage';
 
 export class BasePage {
     readonly page: Page;
-    readonly url:string;
+    readonly url: string;
     readonly getStorLogo: Locator;
     readonly getSignUpLink: Locator;
     readonly getLoginLink: Locator;
@@ -22,7 +22,7 @@ export class BasePage {
         this.getWelcomeLink = page.locator('a', { hasText: 'WelCome' });
         this.getHomeLink = page.locator('a', { hasText: 'Home' });
         this.getCartLink = page.locator('a', { hasText: 'Cart' });
-        this.url = process.env.URL?? 'https://www.demoblaze.com/index.html';
+        this.url = process.env.URL ?? 'https://www.demoblaze.com/index.html';
     }
 
     async goto() {

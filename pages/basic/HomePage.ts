@@ -28,13 +28,13 @@ export class HomePage extends BasePage {
             let eleList: Locator = await this.page.locator('a', { hasText: productName });
             let count = await eleList.count();
             for (let index = 0; index < count; ++index) {
-                let itemName:string = await eleList.nth(index).textContent()?? "Not Found";
-                let itemPrice:string = await eleList.nth(index).locator('../../h5').textContent()?? '0.00';
+                let itemName: string = await eleList.nth(index).textContent() ?? "Not Found";
+                let itemPrice: string = await eleList.nth(index).locator('../../h5').textContent() ?? '0.00';
                 let newItem = {
                     name: itemName.trim(),
                     price: itemPrice.trim().substring(1)
                 };
-                
+
                 items.push(newItem);
             }
             if (await this.getNextLink.isVisible()) {
@@ -53,9 +53,9 @@ export class HomePage extends BasePage {
         await this.getCategory(categoryName);
         let searchFinished: boolean = false;
         while (!searchFinished) {
-            if(await this.page.locator('a', { hasText: productName }).first().isVisible()){
+            if (await this.page.locator('a', { hasText: productName }).first().isVisible()) {
                 await this.page.locator('a', { hasText: productName }).first().click();
-                let productPage:ProductPage = new ProductPage(this.page);
+                let productPage: ProductPage = new ProductPage(this.page);
                 await productPage.checkProductName(productName);
                 break;
             }
@@ -67,6 +67,6 @@ export class HomePage extends BasePage {
                 searchFinished = true;
             }
         };
-        
+
     }
 }
