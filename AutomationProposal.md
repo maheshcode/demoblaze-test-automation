@@ -11,7 +11,7 @@ The main objective is to have a stable automated test suite for regressions. If 
 
 Another objective is to have automated smoke or sanity test suites (Subset of regression) which will be helpful in build verifications.
 
-The further objective is to use automation for non-function testing. Tracking and validating performance measures with UL flows will highlight platform performance risks associated with any new architectural or technological changes.
+The further objective is to use automation for non-function testing. Tracking and validating performance measures with UI flows will highlight platform performance risks associated with any new architectural or technological changes.
 
 
 # Tools & Framework to Choose
@@ -36,7 +36,7 @@ Playwright is a better choice for eCommerce application testing. As for testing 
 
 Automation projects need to be capable of running against a given environment. In Playwright, it can be done using dotenv NPM package https://www.npmjs.com/package/dotenv. The test environment-wise configuration(properties, eg: URL) needs to be in separate .env files to load accordingly. The test should have been designed in a way to run for a given environment with proper test data management. (Have discussed in below)
 
-The best case is to a non-prod environment to run test automation with real integrations. The regression test suites need to run against non-prod environments frequently that can be configured using DevOps pipeline. Having a daily run and having the report will be ideal as it will give an indication of the stability of the environment so as the automation. 
+The best case is to have a non-prod environment to run test automation with real integrations. The regression test suites need to run against non-prod environments frequently that can be configured using DevOps pipeline. Having a daily run and having the report will be ideal as it will give an indication of the stability of the environment as the automation. 
 
 Automation should be less dependent on predefined test data. In e-commerce applications, most tests are depend on the available products in the platform. Hence there can be have separate script developed and run more frequently to make sure desired number of products are available in an environment to run the regression. On the other hand test automation can be designed to pick available data from the environment for given criteria. if needed, in test preconditions implementation can manipulate the state of the data for a particular test, calling backend API or DB to make it fast instead of doing the same on UI flow within the test.
 
