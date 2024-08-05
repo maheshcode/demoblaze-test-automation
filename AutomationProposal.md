@@ -42,4 +42,6 @@ Automation should be less dependent on predefined test data. In e-commerce appli
 
 For the on-demand execution of the test, it needs to be configured in CI/CD pipeline job with runtime parameters to edit the environment, browser, branch, scope etc. Getting triggered with a development code push will be great for achieving continuous integration or quick validation of the new code.
 
+The test needs to be designed in a way that it can run in parallel. This is important with the growth of the test suites to manage the full execution time. By default, playwrights have parallelism at the file level. Test data and resources should be in consideration for parallelism. 
+
 
