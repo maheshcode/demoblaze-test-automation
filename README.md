@@ -1,7 +1,7 @@
 # demoblaze-test-automation
 Playwright Test Automation Sample Project With POM
 
-The following test case is automated in this project with the page object model and can run against multiple environments, different screen sizes and mobile views to check site responsiveness. Also test is parameterized to achieve a data-driven test for various input scenarios.
+The following test case is automated in this project with the page object model and can run against multiple environments, different screen sizes and mobile views to check site responsiveness. Also, the test is parameterized to achieve a data-driven test for various input scenarios.
 
 
 # Test Case Outline
@@ -25,14 +25,14 @@ The following test case is automated in this project with the page object model 
   </tr>
    <tr>
     <td> 4. Click on the products that are selected </td>
-    <td> Verify it will display with the correct product name and price is visible as epected </td>
+    <td> Verify it will display with the correct product name and price is visible as expected </td>
   </tr>
    <tr>
     <td> 5. Click 'Add to cart' </td>
     <td> Verify browser alert contains 'Product added.'  </td>
   </tr>
    <tr>
-    <td> 6. Do above for all the products searched before <br> coming back to home page </td>
+    <td> 6. Do the above for all the products searched <br> coming back to the home page </td>
     <td> --do--  </td>
   </tr>
    <tr>
@@ -52,7 +52,7 @@ The following test case is automated in this project with the page object model 
 
 ## Assumption
 
-* There are more than one products available for given search keyword.
+* There is more than one product available for a given search keyword.
 * 'Sony vaio i5', 'Samsung galaxy s6' and 'Dell i7 8gb' are available.
 
 
