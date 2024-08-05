@@ -1,7 +1,10 @@
 # demoblaze-test-automation
 Playwright Test Automation Sample Project With POM
 
-The following test case is automated in this project with the page object model and can run against multiple environments, different screen sizes and mobile views to check site responsiveness.
+The following test case is automated in this project with the page object model and can run against multiple environments, different screen sizes and mobile views to check site responsiveness. Also, the test is parameterized to achieve a data-driven test for various input scenarios.
+
+
+# Test Case Outline
 
 <table width="300">
   <tr>
@@ -22,14 +25,14 @@ The following test case is automated in this project with the page object model 
   </tr>
    <tr>
     <td> 4. Click on the products that are selected </td>
-    <td> Verify it will display with the correct product name and price is visible as epected </td>
+    <td> Verify it will display with the correct product name and price is visible as expected </td>
   </tr>
    <tr>
     <td> 5. Click 'Add to cart' </td>
     <td> Verify browser alert contains 'Product added.'  </td>
   </tr>
    <tr>
-    <td> 6. Do above for all the products searched before <br> coming back to home page </td>
+    <td> 6. Do the above for all the products searched <br> coming back to the home page </td>
     <td> --do--  </td>
   </tr>
    <tr>
@@ -47,14 +50,25 @@ The following test case is automated in this project with the page object model 
 </table>
 
 
+## Assumption
+
+* There is more than one product available for a given search keyword.
+* 'Sony vaio i5', 'Samsung galaxy s6' and 'Dell i7 8gb' are available.
+
+
 
 # How To Run
+
+Prerequisites:  
+Install Node.js latest (18 +)
+
 1. Git clone the project https://github.com/maheshcode/demoblaze-test-automation.
 2. Move to folder 'demobalze-test-automation'.
 3. Execute 'npm install'.
 4. Execute 'npx playwright install' for default browsers
-5. Execute 'npx playwright test order-placement.spec.ts --project=chromium' to run the test.
+5. Execute 'npx playwright test order-placement.spec.ts --project=chromium --workers=1' to run the test.
 6. After the test gets executed (it will take around 40 seconds) execute 'npx playwright show-report' for the report.
+
 
 # Run With VSCode
 https://playwright.dev/docs/getting-started-vscode
@@ -65,7 +79,9 @@ https://playwright.dev/docs/getting-started-vscode
    ![image](https://github.com/user-attachments/assets/4ef8bb92-9d73-496d-9b7d-bfcc4c90206a)
 
 
+
 # + Points
+
 
 ## Running test for site responsiveness across different screen sizes and devices
    
@@ -105,10 +121,18 @@ Different projects config in playwright.config to run in different screen sizes 
   ]
 
 
-Add the project parameter when running the test in the command line "npx playwright test order-placement.spec.ts --project='Mobile Safari'"
+Add the project parameter when running the test in the command line "npx playwright test order-placement.spec.ts --project='Mobile Safari' --workers=1"
 or use VSCode as follows
 
 ![image](https://github.com/user-attachments/assets/7206e729-8a62-4f99-9904-d2273c809561)
+
+
+## Implement data-driven for various input scenarios
+
+The test case mentioned above is implemented with a parameterized test where it can run for various inputs. It can be further implemented to get data from files if there are a lot of input data sets.
+
+![image](https://github.com/user-attachments/assets/3c5b5952-e140-4d9e-b493-5ab1ceb48d69)
+
 
 
 
