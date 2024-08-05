@@ -131,7 +131,8 @@ or use VSCode as follows
 
 The test case mentioned above is duplicated (order-placement-data-driven.spec.ts) to show the example of a parameterized test where it can run for various inputs. It can be further implemented to get data from files if there are a lot of input data sets.
 
-![image](https://github.com/user-attachments/assets/3c5b5952-e140-4d9e-b493-5ab1ceb48d69)
+<img width="1431" alt="image" src="https://github.com/user-attachments/assets/df0257f5-9838-421d-a646-d6301570928c">
+
 
 
 
