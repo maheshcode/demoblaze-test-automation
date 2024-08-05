@@ -62,11 +62,13 @@ The following test case is automated in this project with the page object model 
 Prerequisites:  
 Install Node.js latest (18 +)
 
+Do following steps on terminal
+
 1. Git clone the project https://github.com/maheshcode/demoblaze-test-automation.
 2. Move to folder 'demobalze-test-automation'.
-3. Execute 'npm install'.
-4. Execute 'npx playwright install' for default browsers
-5. Execute 'npx playwright test order-placement.spec.ts --project=chromium' to run the test.
+3. Run 'npm install'.
+4. Run 'npx playwright install' for default browsers
+5. Run 'npx playwright test order-placement.spec.ts --project=chromium' to run the test.
 6. After the test gets executed (it will take around 40 seconds) execute 'npx playwright show-report' for the report.
 
 
@@ -127,6 +129,7 @@ or use VSCode as follows
 ![image](https://github.com/user-attachments/assets/7206e729-8a62-4f99-9904-d2273c809561)
 
 
+
 ## Implement data-driven for various input scenarios
 
 The test case mentioned above is duplicated (order-placement-data-driven.spec.ts) to show the example of a parameterized test where it can run for various inputs. It can be further implemented to get data from files if there are a lot of input data sets.
@@ -135,5 +138,12 @@ The test case mentioned above is duplicated (order-placement-data-driven.spec.ts
 
 
 
+## Validate Performance Metrics
+
+The test 'perf-test.spec.ts' will verify page-load time within 2 seconds
+
+Run : npx playwright test perf-test.spec.ts --project=chromium
+
+![image](https://github.com/user-attachments/assets/9ee2b17c-94f6-43cd-9632-72f47630efd2)
 
 
