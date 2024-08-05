@@ -18,18 +18,18 @@ The following test case is automated in this project with the page object model
   </tr>
   <tr>
     <td> 3. Select the category 'laptops' and search for the item name <br> containing the keyword eg: 'Sony', and through navigation </td>
-    <td> TBA </td>
+    <td> Verify selected item names contains the keyword </td>
   </tr>
    <tr>
     <td> 4. Click on the products that are selected </td>
-    <td> Verify it will display with the correct product name visible </td>
+    <td> Verify it will display with the correct product name and price is visible as epected </td>
   </tr>
    <tr>
     <td> 5. Click 'Add to cart' </td>
     <td> Verify browser alert contains 'Product added.'  </td>
   </tr>
    <tr>
-    <td> 6. Do above for all the product searched before <br> coming back to home page </td>
+    <td> 6. Do above for all the products searched before <br> coming back to home page </td>
     <td> --do--  </td>
   </tr>
    <tr>
@@ -54,7 +54,7 @@ The following test case is automated in this project with the page object model
 3. Execute 'npm install'.
 4. Execute 'npx playwright install' for default browsers
 5. Execute 'npx playwright test order-placement.spec.ts --project=chromium' to run the test.
-6. After the test gets executed (it will take around 40 seconds) execute 'npx playwright test order-placement.spec.ts --project=chromium' for the report.
+6. After the test gets executed (it will take around 40 seconds) execute 'npx playwright show-report' for the report.
 
 # Run With VSCode
 https://playwright.dev/docs/getting-started-vscode
@@ -65,7 +65,7 @@ https://playwright.dev/docs/getting-started-vscode
    ![image](https://github.com/user-attachments/assets/4ef8bb92-9d73-496d-9b7d-bfcc4c90206a)
 
 
-## + Points
+# + Points
 
 ## Running test for site responsiveness across different screen sizes and devices
    
