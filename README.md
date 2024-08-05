@@ -66,7 +66,7 @@ Install Node.js latest (18 +)
 2. Move to folder 'demobalze-test-automation'.
 3. Execute 'npm install'.
 4. Execute 'npx playwright install' for default browsers
-5. Execute 'npx playwright test order-placement.spec.ts --project=chromium' to run the test.
+5. Execute 'npx playwright test order-placement.spec.ts --project=chromium --workers=1' to run the test.
 6. After the test gets executed (it will take around 40 seconds) execute 'npx playwright show-report' for the report.
 
 
