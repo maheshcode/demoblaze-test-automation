@@ -3,6 +3,7 @@ Playwright Test Automation Sample Project With POM
 
 The following test case is automated in this project with the page object model and can run against multiple environments, different screen sizes and mobile views to check site responsiveness. Also test is parameterized to achieve a data-driven test for various input scenarios.
 
+
 # Test Case Outline
 
 <table width="300">
@@ -48,6 +49,7 @@ The following test case is automated in this project with the page object model 
   </tr>
 </table>
 
+
 ## Assumption
 
 * There are more than one products available for given search keyword.
@@ -67,6 +69,7 @@ Install Node.js latest (18 +)
 5. Execute 'npx playwright test order-placement.spec.ts --project=chromium' to run the test.
 6. After the test gets executed (it will take around 40 seconds) execute 'npx playwright show-report' for the report.
 
+
 # Run With VSCode
 https://playwright.dev/docs/getting-started-vscode
 
@@ -76,7 +79,9 @@ https://playwright.dev/docs/getting-started-vscode
    ![image](https://github.com/user-attachments/assets/4ef8bb92-9d73-496d-9b7d-bfcc4c90206a)
 
 
+
 # + Points
+
 
 ## Running test for site responsiveness across different screen sizes and devices
    
@@ -120,6 +125,7 @@ Add the project parameter when running the test in the command line "npx playwri
 or use VSCode as follows
 
 ![image](https://github.com/user-attachments/assets/7206e729-8a62-4f99-9904-d2273c809561)
+
 
 ## Implement data-driven for various input scenario
 
