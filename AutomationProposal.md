@@ -16,19 +16,18 @@ The further objective is to use automation for non-function testing. Tracking an
 
 # Tools & Framework to Choose
 
-Playwright is a better choice for eCommerce application testing. As for testing e-commerce applications may not need to worry much about backend integration and architecture it is important to focus on E2E UI experience of the user. 
+Playwright is a better choice for eCommerce application testing. As for testing e-commerce applications may not need to worry much about backend integration and architecture, it is important to focus on E2E UI experience of the user. 
 
-1. Cross-browser Testing: It is important to ensure that the eCommerce application works consistently across different platforms. Playwright supports testing across multiple browsers (Chromium, Firefox, WebKit). Additionally, Playwright can run tests with various screen sizes and mobile emulators, ensuring the site's responsiveness.
-2. End-to-end Testing: It provides a comprehensive solution for end-to-end testing, allowing you to simulate user interactions and verify the complete functionality of your application.
-3. Parallel Testing: Playwright allows you to run tests in parallel, which can significantly speed up the testing process, essential for the fast-paced environment of eCommerce.
-4. Network Interception: It supports network interception, enabling you to test how your application handles various network conditions, such as slow connections or outages, which is crucial for user experience. 
-5. Robustness: Playwright offers reliable and stable tests, reducing flakiness and ensuring that your eCommerce site remains functional and performant.
-6. Rich API: It provides a rich set of APIs for interacting with the DOM, handling frames, capturing screenshots, and generating PDFs, which are often needed for comprehensive testing scenarios.
-7. Headless Mode: Playwright supports headless mode, allowing for faster execution of tests without a GUI, which is beneficial for continuous integration and deployment pipelines.
-8. Advanced Automation Capabilities: It supports complex scenarios such as file uploads/downloads, form submissions, and multi-page navigation, which are common in eCommerce applications.
-9. Visual Testing: Playwright can integrate with visual testing tools to ensure the visual integrity of your application, which is important for the user interface of eCommerce sites.
-10. Performance measures: Playwright can extract performance metrics from tests and also integrate with tools like Lighthouse for additional client-side measurements.
-11. Out-of-the-box API testing: Playwright can test APIs and make API calls, which is particularly useful for creating test data, even if you’re not performing extensive API testing.
+1. Cross-browser Testing: <br> It is important to ensure that the eCommerce application works consistently across different platforms. Playwright supports testing across multiple browsers (Chromium, Firefox, WebKit). Additionally, Playwright can run tests with various screen sizes and mobile emulators, ensuring the site's responsiveness.
+2. End-to-end Testing: <br> It provides a comprehensive solution for end-to-end testing, allowing you to simulate user interactions and verify the complete functionality of the application.
+3. Parallel Testing: <br> Playwright allows you to run tests in parallel, which can significantly speed up the testing process.
+4. Network Interception: <br> It supports network interception, enabling you to test how your application handles various network conditions, such as slow connections or outages, which is crucial for user experience. 
+5. Rich API: <br> It provides a rich set of APIs for interacting with the DOM, handling frames, capturing screenshots, and generating PDFs, which are often needed for comprehensive testing scenarios.
+6. Headless Mode: <br> Playwright supports headless mode, allowing for faster execution of tests without a GUI, which is beneficial for continuous integration and deployment pipelines.
+7. Advanced Automation Capabilities: <br> It supports complex scenarios such as file uploads/downloads, form submissions, and multi-page navigation, which are common applications.
+8. Visual Testing: <br> Playwright can integrate with visual testing tools to ensure the visual integrity of your application, which is important for the user interface of eCommerce sites.
+9. Performance measures: <br> Playwright can extract performance metrics from tests and also integrate with tools like Lighthouse for additional client-side measurements.
+10. Out-of-the-box API testing: <br> Playwright can test APIs and make API calls, which is particularly useful for creating test data, even if you’re not performing extensive API testing.
 
 
 
@@ -38,7 +37,7 @@ Automation projects need to be capable of running against a given environment. I
 
 The best case is to have a non-prod environment to run test automation with real integrations. The regression test suites need to run against non-prod environments frequently that can be configured using DevOps pipeline. Having a daily run and having the report will be ideal as it will give an indication of the stability of the environment as the automation. 
 
-Automation should be less dependent on predefined test data. In e-commerce applications, most tests are depend on the available products in the platform. Hence there can be have separate script developed and run more frequently to make sure desired number of products are available in an environment to run the regression. On the other hand test automation can be designed to pick available data from the environment for given criteria. if needed, in test preconditions implementation can manipulate the state of the data for a particular test, calling backend API or DB to make it fast instead of doing the same on UI flow within the test.
+Automation should be less dependent on predefined test data. In e-commerce applications, most tests are depend on the available products in the platform. Hence there can be have separate script developed and run more frequently to make sure the desired number of products are available in an environment to run the regression. On the other hand test automation can be designed to pick available data from the environment for given criteria. if needed, in test preconditions implementation can manipulate the state of the data for a particular test, calling backend API or DB to make it fast instead of doing the same on UI flow within the test.
 
 For the on-demand execution of the test, it needs to be configured in CI/CD pipeline job with runtime parameters to edit the environment, browser, branch, scope etc. Getting triggered with a development code push will be great for achieving continuous integration or quick validation of the new code.
 
