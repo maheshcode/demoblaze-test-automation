@@ -66,7 +66,7 @@ Install Node.js latest (18 +)
 2. Move to folder 'demobalze-test-automation'.
 3. Execute 'npm install'.
 4. Execute 'npx playwright install' for default browsers
-5. Execute 'npx playwright test order-placement.spec.ts --project=chromium --workers=1' to run the test.
+5. Execute 'npx playwright test order-placement.spec.ts --project=chromium' to run the test.
 6. After the test gets executed (it will take around 40 seconds) execute 'npx playwright show-report' for the report.
 
 
@@ -121,7 +121,7 @@ Different projects config in playwright.config to run in different screen sizes 
   ]
 
 
-Add the project parameter when running the test in the command line "npx playwright test order-placement.spec.ts --project='Mobile Safari' --workers=1"
+Add the project parameter when running the test in the command line "npx playwright test order-placement.spec.ts --project='Mobile Safari'"
 or use VSCode as follows
 
 ![image](https://github.com/user-attachments/assets/7206e729-8a62-4f99-9904-d2273c809561)
@@ -129,7 +129,7 @@ or use VSCode as follows
 
 ## Implement data-driven for various input scenarios
 
-The test case mentioned above is implemented with a parameterized test where it can run for various inputs. It can be further implemented to get data from files if there are a lot of input data sets.
+The test case mentioned above is duplicated (order-placement-data-driven.spec.ts) to show the example of a parameterized test where it can run for various inputs. It can be further implemented to get data from files if there are a lot of input data sets.
 
 ![image](https://github.com/user-attachments/assets/3c5b5952-e140-4d9e-b493-5ab1ceb48d69)
 
