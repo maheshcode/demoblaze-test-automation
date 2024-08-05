@@ -49,7 +49,7 @@ export class HomePage extends BasePage {
 
     }
 
-    async selectProduct(categoryName: string, productName: string) {
+    async selectProduct(categoryName: string, productName: string, productPrice: string) {
         await this.getCategory(categoryName);
         let searchFinished: boolean = false;
         while (!searchFinished) {
@@ -57,6 +57,7 @@ export class HomePage extends BasePage {
                 await this.page.locator('a', { hasText: productName }).first().click();
                 let productPage: ProductPage = new ProductPage(this.page);
                 await productPage.checkProductName(productName);
+                await productPage.checkProductPrice(productPrice);
                 break;
             }
             if (await this.getNextLink.isVisible()) {

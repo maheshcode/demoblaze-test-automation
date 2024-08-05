@@ -17,6 +17,10 @@ export class ProductPage extends BasePage {
         await expect(this.page.getByRole('heading', { name: productName })).toBeVisible();
     }
 
+    async checkProductPrice(productPrice: string) {
+        await expect(this.page.getByRole('heading', { name: '$' + productPrice + ' *includes tax' })).toBeVisible();
+    }
+
     async addToCart(index: number) {
         // if(index==0){
         this.page.once('dialog', async dialog => {
