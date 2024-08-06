@@ -6,9 +6,9 @@ import { CartPage } from '../../pages/order/CartPage';
 
 test('E2E: Place an order for with new signup user', async ({ page }) => {
     test.setTimeout(90000);
-    let category:string = 'Laptops'; 
-    let searchName:string = 'Sony'; 
-    let removeName:string = 'Sony vaio i5'; 
+    let category: string = 'Laptops';
+    let searchName: string = 'Sony';
+    let removeName: string = 'Sony vaio i5';
     let userName: string;
     //Sign up the user
     let homePage = new HomePage(page);

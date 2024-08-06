@@ -15,4 +15,4 @@ async function measurePerformance(page: Page) {
     });
     console.log(performanceTiming);
     expect(performanceTiming.duration).toBeLessThan(2000);
-    };
+};
