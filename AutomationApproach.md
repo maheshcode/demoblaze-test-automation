@@ -24,7 +24,7 @@ Some key features of the tool Playwright that allow us to choose for this projec
 2. End-to-end Testing: <br> It provides a comprehensive solution for end-to-end testing, allowing you to simulate user interactions and verify the complete functionality of the application.
 3. Parallel Testing: <br> Playwright allows you to run tests in parallel, which can significantly speed up the testing process.
 4. Network Interception: <br> It supports network interception, enabling you to test how your application handles various network conditions, such as slow connections or outages, which is crucial for user experience. 
-5. Rich API: <br> It provides a rich set of APIs for interacting with the DOM, handling frames, capturing screenshots, and generating PDFs, which are often needed for comprehensive testing scenarios.
+5. Rich API: <br> It provides a rich set of APIs for interacting with the DOM, handling frames, capturing screenshots, and generating PDFs, which are often needed for comprehensive testing scenarios. Ability to have easy using user-facing locators will help to have steady test execution even with the dom element changes.
 6. Headless Mode: <br> Playwright supports headless mode, allowing for faster execution of tests without a GUI, which is beneficial for continuous integration and deployment pipelines.
 7. Advanced Automation Capabilities: <br> It supports complex scenarios such as file uploads/downloads, form submissions, and multi-page navigation, which are common applications.
 8. Visual Testing: <br> Playwright can integrate with visual testing tools to ensure the visual integrity of your application, which is important for the user interface of eCommerce sites.
@@ -49,5 +49,7 @@ Automation should be less dependent on predefined test data. In e-commerce appli
 For the on-demand execution of the test, it needs to be configured in CI/CD pipeline job with runtime parameters to edit the environment, browser, branch, scope etc. Getting triggered with a development code push will be great for achieving continuous integration or quick validation of the new code.
 
 The test needs to be designed in a way that it can run in parallel. This is important with the growth of the test suites to manage the full execution time. By default, playwrights have parallelism at the file level. Test data and resources should be in consideration for parallelism. 
+
+Maintaining the automation suite to have a high pass rate will be the challenge and monitoring and fixing on test automation failures continuously will be key to achieving a stable test suite. Best practices should be established for automation projects before committing changes to the main development branch to ensure clean code.
 
 
