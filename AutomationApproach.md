@@ -40,7 +40,7 @@ VS Code (Visual Studio Code) will be the choice for an integrated development en
 
 # Setup Environment, Manage Test Data & Execute test
 
-Automation projects need to be capable of running against a given environment at a given time. In Playwright, to work with multiple environments it can be done using dotenv NPM package https://www.npmjs.com/package/dotenv. The test environment-wise configuration(properties, eg: URL) needs to be in separate .env files to load accordingly. The test should have been designed in a way to run for a given environment with proper test data management. (Have discussed in below)
+Automation projects need to be capable of running against a given environment at scheduled or on-demand. In Playwright, to work with multiple environments it can be done using dotenv NPM package https://www.npmjs.com/package/dotenv. The test environment-wise configuration(properties, eg: URL) needs to be in separate .env files to load accordingly. The test should have been designed in a way to run for a given environment with proper test data management. (Have discussed in below)
 
 There should be a non-prod environment to run test automation with real integrations if we think of covering automation full end to end manner.If we have third-party integration like a payment gateway then it need to connect with the sandbox environment to test the full flow with callbacks. Otherwise, we may need to consider simulating or mocking those to cater to full-flow testing. The regression test suites need to run against non-prod environments frequently that can be configured using DevOps pipeline. Having a daily run and having the report will be ideal as it will indicate the stability of the environment as the automation.
 
