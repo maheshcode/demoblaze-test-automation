@@ -5,7 +5,7 @@ This document will provide a test automation strategy for the Demoblaze e-commer
 
 # Goals & Objectives of Automation
 
-The ultimate goal of test automation is to maintain quick but quality deliveries. The time to market new features will be crucial without compromising the stability and quality of the platform. In other way goal is to have an automation suite to provide a better user experience of the e-commerce platform both in functional and non-functional aspects. 
+The ultimate goal of test automation is to maintain quick but quality deliveries. The time to market of new features will be crucial without compromising the stability and quality of the platform. In other way goal is to have an automation suite to provide a better user experience of the e-commerce platform both in functional and non-functional aspects. 
 
 The main objective is to have a stable automated test suite for regressions. If the application is more mature and has many regression test cases, prioritizing and selecting these cases for automation is essential. More focus should be on E2E user journeys that may validate the core functionalities covering multiple components. Need to keep adding automated tests for the suite with any new development of features.
 
@@ -37,7 +37,7 @@ Automation projects need to be capable of running against a given environment. I
 
 The best case is to have a non-prod environment to run test automation with real integrations. The regression test suites need to run against non-prod environments frequently that can be configured using DevOps pipeline. Having a daily run and having the report will be ideal as it will give an indication of the stability of the environment as the automation. 
 
-Automation should be less dependent on predefined test data. In e-commerce applications, most tests are depend on the available products in the platform. Hence there can be have separate script developed and run more frequently to make sure the desired number of products are available in an environment to run the regression. On the other hand test automation can be designed to pick available data from the environment for given criteria. if needed, in test preconditions implementation can manipulate the state of the data for a particular test, calling backend API or DB to make it fast instead of doing the same on UI flow within the test.
+Automation should be less dependent on predefined test data. In e-commerce applications, most tests are depend on the available products in the platform. Hence, separate scripts can be developed and run more frequently to ensure the desired number of products are available in the environment for running regression tests. On the other hand test automation can be designed to pick available data from the environment for given criteria. if needed, in test preconditions implementation can manipulate the state of the data for a particular test, calling backend API or DB to make it fast instead of doing the same on UI flow within the test.
 
 For the on-demand execution of the test, it needs to be configured in CI/CD pipeline job with runtime parameters to edit the environment, browser, branch, scope etc. Getting triggered with a development code push will be great for achieving continuous integration or quick validation of the new code.
 
