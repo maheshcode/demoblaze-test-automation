@@ -1,4 +1,4 @@
-# Test Automation Proposal For Demoblaze e-commerce Platform
+# Test Automation Approach For Demoblaze e-commerce Platform
 
 This document will provide a test automation strategy for the Demoblaze e-commerce platform.
 
