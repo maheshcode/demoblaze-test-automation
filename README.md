@@ -45,7 +45,7 @@ The following test case is automated in this project with the page object model 
   </tr>
    <tr>
     <td> 9. Place the order adding detail  </td>
-    <td> Verify total price and other details available in success message </td>
+    <td> Verify the total amount displayed in the detail entering form <br> Verify total price and other details available in success message </td>
   </tr>
 </table>
 
