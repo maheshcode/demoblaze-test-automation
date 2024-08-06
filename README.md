@@ -67,7 +67,7 @@ Do following steps on terminal
 1. Git clone the project https://github.com/maheshcode/demoblaze-test-automation.
 2. Move to folder 'demobalze-test-automation'.
 3. Run 'npm install'.
-4. Run 'npx playwright install' for default browsers
+4. Run 'npx playwright install'
 5. Run 'npx playwright test order-placement.spec.ts --project=chromium' to run the test.
 6. After the test gets executed (it will take around 40 seconds) execute 'npx playwright show-report' for the report.
 
