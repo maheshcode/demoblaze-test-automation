@@ -7,7 +7,7 @@ This document will provide a test automation strategy for the Demoblaze e-commer
 
 The ultimate goal of test automation is to support quick but quality deliveries. The time to market of the new features will be crucial without compromising the stability and quality of the platform. In other way goal is to have an automation suite to provide a better user experience of the e-commerce platform both in functional and non-functional aspects. 
 
-The main objective is to have a stable automated test suite for regressions. To start automation for existing regression test suite, prioritizing and selecting these cases for automation is essential. More focus should be on E2E user journeys that may validate the core functionalities covering multiple components. Need to keep adding automated tests for the suite with any new development of features.
+The main objective is to have a stable automated test suite for regressions. To start automation for the existing regression test suite, prioritizing and selecting these cases for automation is essential. More focus should be on E2E user journeys that may validate the core functionalities covering multiple components. Need to keep adding automated tests for the suite with any new development of features.
 
 Another objective is to have automated smoke or sanity test suites (Subset of regression) which will be helpful in build verifications. This will ensure the environment will be in a testable state with the new deployment.
 
@@ -50,6 +50,6 @@ For the on-demand execution of the test, it needs to be configured in CI/CD pipe
 
 The test needs to be designed in a way that it can run in parallel. This is important with the growth of the test suites to manage the full execution time. By default, playwrights have parallelism at the file level. Test data and resources should be in consideration for parallelism. 
 
-Maintaining the automation suite to have a high pass rate will be the challenge and monitoring and fixing on test automation failures continuously will be key to achieving a stable test suite. Best practices should be established for automation projects before committing changes to the main development branch to ensure clean code.
+Maintaining the automation suite to have a high pass rate will be a challenge. Monitoring and fixing test automation failures continuously will be key to achieving a stable test suite. Best practices should be established for automation projects before committing changes to the main development branch to ensure clean code.
 
 
